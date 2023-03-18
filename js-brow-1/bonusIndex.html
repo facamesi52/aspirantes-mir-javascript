@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verificador de palindromos</title>
+</head>
+<body>
+	<p for="palabra">Ingrese una palabra:</p>
+	<input type="text" id="palabra">
+	<button id="button">Verificar</button>
+	<p id="resultado"></p>
+	
+	<script>
+        
+        function verificar() {
+  let palabra = document.getElementById("palabra").value;
+  let reversa = palabra.split("").reverse().join("");
+  
+    if (palabra == reversa) {
+    document.getElementById("resultado").innerHTML = "VERDADERO, la palabra es palindromo";
+    } else {
+    document.getElementById("resultado").innerHTML = "FALSO, La palabra no es un palindromo";
+    }
+    }
+    document.getElementById("button").onclick=verificar
+    </script>
+</body>
+</html>
