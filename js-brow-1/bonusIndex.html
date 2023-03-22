@@ -13,9 +13,15 @@
         
         function verificar() {
   let palabra = document.getElementById("palabra").value;
-  let reversa = palabra.split("").reverse().join("");
+  let palabraok = palabra.split(" ").join("").toLowerCase();
+
+
+  let reversa1 = palabra.split("").reverse().join("");
+  let reversa = reversa1.split(" ").join("").toLowerCase()
+
+
   
-    if (palabra == reversa) {
+    if (palabraok == reversa) {
     document.getElementById("resultado").innerHTML = "VERDADERO, la palabra es palindromo";
     } else {
     document.getElementById("resultado").innerHTML = "FALSO, La palabra no es un palindromo";
